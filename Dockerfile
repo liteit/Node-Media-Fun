@@ -13,7 +13,7 @@ LABEL org.label-schema.build-date="${BUILD_DATE}" \
       org.label-schema.version="2.5.0" \
       maintainer="https://github.com/illuspas"
 
-WORKDIR /usr/src/app
+WORKDIR /src/app
 
 COPY package*.json ./
 
