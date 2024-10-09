@@ -621,6 +621,7 @@ nms.run();
 ```
 
 # Rtsp/Rtmp Relay
+
 NodeMediaServer implement RTSP and RTMP relay with ffmpeg.
 
 ## Static pull

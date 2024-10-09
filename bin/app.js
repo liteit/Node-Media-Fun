@@ -26,6 +26,26 @@ if (argv.help) {
 }
 
 const config = {
+
+  relay: {
+    ffmpeg: '/opt/homebrew/bin/ffmpeg',
+    tasks: [
+      {
+        app: 'cctv',
+        mode: 'static',
+        edge: 'rtsp://admin:Vinty123@80.111.165.73:1554/Streaming/channels/102',
+        name: '102',
+        rtsp_transport : 'tcp', 
+      }, 
+      {
+        app: 'mv',
+        mode: 'static',
+        edge: 'mov.mov',
+        name: 'mov'
+      }
+    ]
+  },
+
   rtmp: {
     port: argv.rtmp_port,
     chunk_size: 60000,
@@ -38,6 +58,7 @@ const config = {
     //   cert: __dirname+'/cert.pem',
     // }
   },
+
   http: {
     port: argv.http_port,
     mediaroot: __dirname+'/media',
@@ -45,17 +66,19 @@ const config = {
     allow_origin: '*',
     api: true
   },
+
   https: {
     port: argv.https_port,
     key: __dirname+'/key.pem',
     cert: __dirname+'/cert.pem',
   },
+
   auth: {
     api: true,
     api_user: 'admin',
     api_pass: 'admin',
-    play: false,
-    publish: false,
+    play: true,
+    publish: true,
     secret: 'nodemedia2017privatekey'
   }
 };
