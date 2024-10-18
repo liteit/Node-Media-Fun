@@ -33,7 +33,7 @@ const config = {
       {
         app: 'cctv',
         mode: 'static',
-        edge: 'rtsp://admin:Vinty123@80.111.165.73:1554/Streaming/channels/102',
+        edge: 'rtsp://admin:Vinty123@80.111.165.73:2554/Streaming/channels/1602',
         name: '102',
         rtsp_transport : 'tcp', 
       }, 
