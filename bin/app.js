@@ -28,7 +28,7 @@ if (argv.help) {
 const config = {
 
   relay: {
-    ffmpeg: '/usr/local/bin/ffmpeg',
+    ffmpeg: '/usr/bin/ffmpeg',
     tasks: [
       {
         app: 'cctv',
